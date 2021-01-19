@@ -69,11 +69,11 @@ function Weather(props) {
 
             try {
                 const nowWeather = await axios({
-                    url: `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`,
+                    url: `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`,
                     method: 'GET'
                 });
                 const tomorrow = await axios({
-                    url: `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}`,
+                    url: `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}`,
                     method: 'GET'
                 });
 
