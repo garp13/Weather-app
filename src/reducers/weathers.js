@@ -104,7 +104,7 @@ const weathers = (state = initialState, action) => {
             state = {
                 ...state,
                 city: action.nowWeather.name,
-                icon: "http://openweathermap.org/img/wn/" + action.nowWeather.weather[0].icon + "@4x.png",
+                icon: "https://openweathermap.org/img/wn/" + action.nowWeather.weather[0].icon + "@4x.png",
                 description: action.nowWeather.weather[0].description,
                 temperatureC: Math.round(action.nowWeather.main.temp-273.15) + "°C",
                 temperatureK: Math.round(action.nowWeather.main.temp*9/5-459.57) + "°F",
@@ -138,7 +138,7 @@ const weathers = (state = initialState, action) => {
                     let data = {
                         time: i.dt_txt.substr(11, 5),
                         temperatureC: Math.round(i.main.temp - 273.15) + "°C",
-                        icon: "http://openweathermap.org/img/wn/" + i.weather[0].icon + "@2x.png"
+                        icon: "https://openweathermap.org/img/wn/" + i.weather[0].icon + "@2x.png"
                     }
                     
                     arrTomorrow.push(data);
